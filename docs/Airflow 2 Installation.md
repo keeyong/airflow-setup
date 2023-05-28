@@ -203,23 +203,23 @@ AIRFLOW_HOME=/var/lib/airflow airflow users delete --username admin
 
 ## 이 Github repo를 클론해서 dags 폴더에 있는 DAG들을 /var/lib/airflow/dags로 복사
 
-keeyong/data-engineering-batch13 repository에 있는 dags 폴더의 내용을 /var/lib/airflow/dags로 복사한다. 
+keeyong/airflow-setup repository에 있는 dags 폴더의 내용을 /var/lib/airflow/dags로 복사한다. 
 
 ```
 sudo su airflow
 cd ~/
-git clone https://github.com/keeyong/data-engineering-batch13.git
-cp -r data-engineering-batch13/dags/* dags
+git clone https://github.com/keeyong/airflow-setup.git
+cp -r airflow-setup/dags/* dags
 ```
 
 ## 이 Github repo의 업데이트가 필요한 경우
 
 ```
 sudo su airflow
-cd ~/data-engineering-batch13
+cd ~/airflow-setup
 git pull
 cd ..
-cp -r data-engineering-batch13/dags/* dags
+cp -r airflow-setup/dags/* dags
 ```
 
 그리고나서 Airflow 웹서버를 다시 방문해보면 (이 설치 작업을 한 시점에 따라) DAG들이 몇개 보이고 일부 에러도 몇개 보일 수 있다. 이 에러들은 나중에 하나씩 해결한다.
