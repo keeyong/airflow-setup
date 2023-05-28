@@ -28,7 +28,7 @@ For more information on `pipenv`, please refer to this [page](https://pipenv-for
 ### Spinning Up Local Airflow Services
 1. data-engineering-batch13 리포를 다운로드받고 메인폴더로 이동한다. 여기 있는 dags 폴더가 결국 airflow dags 폴더가 되고 여기 있는 파이썬 파일들이 DAG로 인식된다.
 ```
-git clone https://github.com/keeyong/data-engineering-batch13.git
+git clone https://github.com/keeyong/airflow-setup.git
 cd data-engineering-batch13
 ```
 2. Airflow 2.5.1에 해당하는 docker-compose.yaml을 다운로드받는다.
@@ -60,11 +60,11 @@ e2abda41736f   postgres:13            "docker-entrypoint.s…"   53 minutes ago 
 ![Local Airflow Login Page](./images/airflow_dags.png)
 
 ### Airflow 컨테이너로 로그인하는 방법
-1. `docker ps`를 실행하고 data-engineering-batch13-airflow-scheduler-1의 CONTAINER ID를 추출한다. 아래 예라면 b9c06238f108에 해당한다. 
+1. `docker ps`를 실행하고 airflow-setup-airflow-scheduler-1의 CONTAINER ID를 추출한다. 아래 예라면 b9c06238f108에 해당한다. 
 ```
 CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS                   PORTS                    NAMES
-416c95ae400e   apache/airflow:2.5.1   "/usr/bin/dumb-init …"   11 minutes ago   Up 3 minutes (healthy)   8080/tcp                 data-engineering-batch13-airflow-worker-1
-b9c06238f108   apache/airflow:2.5.1   "/usr/bin/dumb-init …"   11 minutes ago   Up 3 minutes (healthy)   8080/tcp                 data-engineering-batch13-airflow-scheduler-1
+416c95ae400e   apache/airflow:2.5.1   "/usr/bin/dumb-init …"   11 minutes ago   Up 3 minutes (healthy)   8080/tcp                 airflow-setup-airflow-worker-1
+b9c06238f108   apache/airflow:2.5.1   "/usr/bin/dumb-init …"   11 minutes ago   Up 3 minutes (healthy)   8080/tcp                 airflow-setup-airflow-scheduler-1
 ...
 ```
 2. Container ID("b9c06238f108")를 바탕으로 `docker exec -it b9c06238f108 sh`를 실행한다. 그러면 셀 모드로 들어갈 수 있고 거기서 airflow 명령어를 실행할 수 있다. 소스 코드 편집은 앞서 코드리포를 다운로드 받은 폴더(data-engineering-batch13) 밑의 dags 폴더를 사용하면 된다.
