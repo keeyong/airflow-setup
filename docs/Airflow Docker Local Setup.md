@@ -29,7 +29,7 @@ For more information on `pipenv`, please refer to this [page](https://pipenv-for
 1. data-engineering-batch13 리포를 다운로드받고 메인폴더로 이동한다. 여기 있는 dags 폴더가 결국 airflow dags 폴더가 되고 여기 있는 파이썬 파일들이 DAG로 인식된다.
 ```
 git clone https://github.com/keeyong/airflow-setup.git
-cd data-engineering-batch13
+cd airflow-setup
 ```
 2. Airflow 2.5.1에 해당하는 docker-compose.yaml을 다운로드받는다.
 ```
