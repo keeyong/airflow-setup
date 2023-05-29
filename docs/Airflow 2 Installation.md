@@ -14,8 +14,8 @@
 sudo apt-get update 
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
-sudo pip3 install pyopenssl --upgrade
 sudo apt-get install -y python3-pip
+sudo pip3 install pyopenssl --upgrade
 ```
 
 #### 다음으로 Airflow 2.0을 설치하고 필요 기타 모듈을 설치한다
@@ -24,7 +24,6 @@ sudo apt-get install -y python3-pip
 sudo apt-get install -y libmysqlclient-dev
 sudo pip3 install --ignore-installed "apache-airflow[celery,amazon,mysql,postgres]==2.5.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.1/constraints-3.7.txt"
 sudo pip3 install oauth2client gspread numpy pandas
-# sudo pip3 install cryptography psycopg2-binary
 ```
 
 ## airflow:airflow 계정 생성
