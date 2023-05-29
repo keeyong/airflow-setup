@@ -86,12 +86,11 @@ $ ls /var/lib/airflow
 airflow.cfg  airflow.db  dags   logs  unittests.cfg
 ```
 
-#### Airflow 환경 파일(/var/lib/airflow/airflow.cfg)을 편집하여 다음 4가지를 바꾼다
+#### Airflow 환경 파일(/var/lib/airflow/airflow.cfg)을 편집하여 다음 2가지를 바꾼다
 
  * "executor"를 SequentialExecutor에서 LocalExecutor로 수정한다
  * DB 연결스트링("sql_alchemy_conn")을 앞서 설치한 Postgres로 바꾼다
    * 이 경우 ID와 PW와 데이터베이스 이름이 모두 airflow를 사용하고 호스트 이름은 localhost를 사용한다
- * "load_examples" 설정을 False로 바꾼다
  
 ```
 [core]
@@ -117,7 +116,7 @@ AIRFLOW_HOME=/var/lib/airflow airflow db init
 Airflow 웹서버와 스케줄러를 백그라운드 서비스로 사용하려면 다음 명령을 따라하여 두 개를 서비스로 등록한다. 
 다음 명령들은 <b>ubuntu</b> 계정에서 실행되어야한다. 만일 "[sudo] password for airflow: " 메시지가 나온다면 지금 airflow 계정을 사용하고 있다는 것으로 이 경우 "exit" 명령을 실행해서 ubuntu 계정으로 돌아온다
 
-ubunut 계정으로 아래를 수행
+ubuntu 계정으로 아래를 수행
 
 #### 웹서버와 스케줄러를 각기 서비스로 등록
 
