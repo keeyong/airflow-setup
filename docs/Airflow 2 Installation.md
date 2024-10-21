@@ -1,6 +1,6 @@
-# Airflow 2.5.1 Installation:
+# Airflow 2.9.1 Installation:
 
-- 우분투 20.04에서 Airflow 2.5.1을 설치하는 방법에 대한 문서로 파이썬 3.8을 사용
+- 우분투 20.04에서 Airflow 2.9.1을 설치하는 방법에 대한 문서로 파이썬 3.8을 사용
 - 앞서 별도로 공유된 ssh 로그인 문서를 참조하여 할당된 EC2 서버로 로그인 (이 때 ubuntu 계정을 사용함).
 - VS Code에서 바로 접근하는 방법도 있으며 이 역시 별도 문서를 제공할 예정
 
@@ -22,7 +22,7 @@ sudo pip3 install pyopenssl --upgrade
 
 ```
 sudo apt-get install -y libmysqlclient-dev
-sudo pip3 install --ignore-installed "apache-airflow[celery,amazon,mysql,postgres]==2.5.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.1/constraints-3.7.txt"
+sudo pip3 install --ignore-installed "apache-airflow[celery,amazon,mysql,postgres]==2.9.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.1/constraints-3.8.txt"
 sudo pip3 install oauth2client gspread numpy pandas
 ```
 
